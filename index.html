@@ -25,7 +25,7 @@
       <div class="card-header">Student Table</div>
       <div class="card-body">
         <table class="table table-hover table-bordered table-striped align-middle shadow-sm bg-white rounded" id="studentTable">
-          <thead class="table-primary text-center">
+          <thead class="table-success text-center">
             <tr>
               <th>Name</th>
               <th>ID</th>
@@ -51,7 +51,8 @@
             <input type="text" id="id" class="form-control" placeholder="ID" required />
           </div>
           <div class="col-md-4">
-            <input type="number" id="marks" class="form-control" placeholder="Marks" required />
+            <input type="number" id="marks" class="form-control" placeholder="Marks" required min="0" max="100" />
+
           </div>
           <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -87,7 +88,8 @@
         <div class="modal-body">
           <form id="updateForm">
             <input type="text" id="updateName" class="form-control mb-3" placeholder="New Name" required />
-            <input type="number" id="updateMarks" class="form-control mb-3" placeholder="New Marks" required />
+            <input type="number" id="updateMarks" class="form-control mb-3" placeholder="New Marks" required min="0" max="100" />
+
             <button type="submit" class="btn btn-success">Update</button>
           </form>
         </div>
@@ -117,6 +119,7 @@
       const name = document.getElementById("name").value.trim();
       const id = document.getElementById("id").value.trim();
       const marks = document.getElementById("marks").value.trim();
+      
 
       if (students.find(s => s.id === id)) {
         alert("Student with this ID already exists.");
@@ -149,7 +152,7 @@
       e.preventDefault();
       const newName = document.getElementById("updateName").value.trim();
       const newMarks = document.getElementById("updateMarks").value.trim();
-
+      
       const student = students.find(s => s.id === currentEditId);
       if (student) {
         student.name = newName;
