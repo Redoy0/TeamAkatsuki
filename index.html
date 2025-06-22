@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Student Table -->
+    <div class="card mb-4">
+        <div class="card-header">Student Table</div>
+        <div class="card-body">
+          <table class="table table-bordered text-center" id="studentTable">
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Marks</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+  
+      <!-- Add Student Form -->
+      <div class="card mb-4">
+        <div class="card-header">Add New Student</div>
+        <div class="card-body">
+          <form id="addForm" class="row g-3">
+            <div class="col-md-4">
+              <input type="text" id="name" class="form-control" placeholder="Name" required />
+            </div>
+            <div class="col-md-4">
+              <input type="text" id="id" class="form-control" placeholder="ID" required />
+            </div>
+            <div class="col-md-4">
+              <input type="number" id="marks" class="form-control" placeholder="Marks" required />
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Modify Student Form -->
+      <div class="card mb-4">
+        <div class="card-header">Update Student Data</div>
+        <div class="card-body">
+          <form id="findForm" class="row g-3">
+            <div class="col-md-6">
+              <input type="text" id="searchId" class="form-control" placeholder="Enter ID to Modify" required />
+            </div>
+            <div class="col-md-6">
+              <button type="button" id="modifyBtn" class="btn btn-warning">Modify</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
